@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+div.infobox{
+    background-color: rgb(230, 221, 221);
+    width: 100%;
+    max-width: 95%;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    margin-bottom: 150px;
+    padding: 20px;
+    box-shadow:  4px 6px rgb(163 133 133 / 66%);
+}
+div.infobox p, div.infobox h2{
+    font-size: 36px;
+} 
+div.infobox ul{
+    font-size: 24px;
+}
+
+.container {
+    width: 1000px;
+    height: 1000px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* To position text at the top */
+    align-items: flex-start; /* To position text at the top */
+    font-size: 24px;
+    color: white;
+    border: 1px solid #000;
+    position: relative; /* Required for absolute positioning */
+}
+
+.circle, .box, .triangle {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.box {
+    background-color: black;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid yellow;
+}
+
+
+div.Btns button{
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 24px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+div.Btns button{
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 24px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+.setup {
+    margin-right: 20px;
+}
+
+.sliders {
+    margin-top: 20px;
+}
+
+input[type="range"] {
+    width: 200px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.black-box {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+}
+.circle-container{
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid yellow;
+  }

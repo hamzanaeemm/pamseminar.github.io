@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./PolicyOptions.css">
+</head>
+    <body>
+        <div style="display: block;">
+            <h1 style="font-size: 50px; text-align: center; margin: 50px 50px;" >Usage Guide</h1>
+        <div class="infobox">
+            
+            <h2>
+               Steps to interact with the simulation model.
+            </h2>
+            <ul style="list-style-type: decimal;">
+                <li>Click <strong>Setup button</strong> once to initialize the base environemnt</li>
+                <li>Select the number of <strong>Policy Options</strong> with the Slider</li>
+                <li>Choose number of <strong> Distributors </strong>for the Policy Options</li>
+                <li>Click <strong>Start</strong> Button to start smulation</li>
+                <li>Wait for few seconds until the results are shown. especially if smaller input values are chosen which may take longer to show results.</li>
+    
+            </ul>
+            <h2>What outcome is expected?</h2>
+            <p>
+                <ul style="list-style-type: decimal;">
+                    <li>Upon Clicking setup, <strong>White Circles/Dots</strong> Appear that represent Shortage of Skilled Labour in Each Region</li>
+                    <li>Upon Clicking Start button after choosng some Slider Value, it satrts the simulation</li>
+                    <li>Small Black Boxes represented, number of Policy Options implemented in each Region.</li>
+                    <li>It displays <strong>Yellow triangles</strong> representing the Number of Distributors deployed in each region.</li>
+                    <li><strong>At the end White Circles are reduced based on the input values.</strong></li>
+                    <li>The inout controls disbale while the Simulation is runing and then are enabled again when it is done rinnung.</li>
+            </p>
+            <h2>Tips for best Experience.</h2>
+            <p >
+                <ul style="list-style-type: none;background-color: yellow;">
+                    <li>If you use smaller input values, it may take longer time to show output so for better and faster testing/evaluation use larger input values</li>
+                </ul>
+            </p>
+        </div>
+        <div style="margin-bottom: 100px;">
+            <h1 style="font-size: 50px;text-align: center;">
+                Simulation Model
+            </h1>
+        </div>
+      <div style="display: flex; align-items: center;">
+        <div style="display: block; margin-right: 100px;">
+            <div class="Btns">
+                <button style="margin-bottom: 20px;" class="setup" id="setupButton">Setup</button>
+                <button class="start" id="startButton">Start</button>
+                <button class="resetSetting" id="resetButton" onclick="resetSettings()">Reset Settings</button>
+            </div>
+            <div class="sliders">
+                <div>
+                    <label style="font-size: 24px;" for="vocationalTraining">Number of Policies to be Implemented</label><br><br>
+                    <input  type="range" id="vocationalTraining" min="0" max="5" value="0">
+                    <span style="font-size: 24px;" id="vocationalTrainingValue">0</span>
+                </div>
+                <br><br>
+                <div>
+                    <label style="font-size: 24px;" for="participationRate">Number of Policy Distributors:</label><br><br>
+                    <input  type="range" id="participationRate" min="0" max="100" value="0">
+                    <span style="font-size: 24px;" id="participationRateValue">0</span><br><br><br>
+                    <div id="output"></div>
+                </div>
+                
+            </div>
+        </div>
+    
+        <div class="container">
+            <div class="section" id="nrw" >
+                <div data-triangle-count="0" class="circle-container">NRW</div>
+            </div>
+            <div class="section" id="brandenburg" >
+                <div data-triangle-count="0" class="circle-container">Brandenburg</div>
+            </div>
+            <div class="section" id="lower-saxony" >
+                <div data-triangle-count="0" class="circle-container">Lower Saxony</div>
+            </div>
+            <div class="section" id="bavaria" >
+                <div data-triangle-count="0" class="circle-container">Bavaria</div>
+            </div>
+        </div>
+    </div>
+    </div>
+        <script src="./PolicyOptions.js"></script>    
+    </body>
+    </html>
+</html>
